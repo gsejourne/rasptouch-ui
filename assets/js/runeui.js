@@ -560,9 +560,9 @@ function refreshState() {
     // console.log('dbupdate = ', GUI.json.updating_db);
     // if (typeof GUI.json.updating_db !== 'undefined') {
     if (GUI.json.updating_db !== undefined) {
-        $('a', '#open-panel-sx').html('<i class="fa fa-refresh fa-spin"></i> Updating');
+        $('a', '#open-panel-sx').html('<i class="fa fa-refresh fa-spin" style="line-height: 20px; font-size: 20px;"></i> Updating');
     } else {
-        $('a', '#open-panel-sx').html('<i class="fa fa-music sx"></i> Library');
+        $('a', '#open-panel-sx').html('<i class="fa fa-music sx" style="line-height: 20px; font-size: 20px;"></i> Library');
     }
 }
 

@@ -93,8 +93,20 @@
 </div>
 <div id="menu-bottom">
     <ul>
-        <li id="open-panel-sx"><a href="/#panel-sx"<?=$this->uri(1, '', ' class="open-panel-sx" data-toggle="tab"')?>><i class="fa fa-music"></i> Library</a></li>
-        <li id="open-playback"<?=$this->uri(1, '', ' class="active"')?>><a href="/#playback"<?=$this->uri(1, '', ' data-toggle="tab"')?>><i class="fa fa-play"></i> Playback</a></li>
-        <li id="open-panel-dx"><a href="/#panel-dx"<?=$this->uri(1, '', ' class="open-panel-dx" data-toggle="tab"')?>><i class="fa fa-list"></i> Queue</a></li>
+        <li id="open-panel-sx">
+            <a style="font-size: 20px;"  href="/#panel-sx"<?=$this->uri(1, '', ' class="open-panel-sx" data-toggle="tab"')?>>
+                <i style="line-height: 20px; font-size: 20px;" class="fa fa-music"></i> Library
+            </a>
+        </li>
+        <li id="open-playback"<?=$this->uri(1, '', ' class="active"')?>>
+            <a style="font-size: 20px;"  href="/#playback"<?=$this->uri(1, '', ' data-toggle="tab"')?>>
+                <i style="line-height: 20px; font-size: 20px;" class="fa fa-play"></i> Playback
+            </a>
+        </li>
+        <li id="open-panel-dx">
+            <a style="font-size: 20px;"  href="/#panel-dx"<?=$this->uri(1, '', ' class="open-panel-dx" data-toggle="tab"')?>>
+                <i style="line-height: 20px; font-size: 20px;" class="fa fa-list"></i> Queue
+            </a>
+        </li>
     </ul>
 </div>

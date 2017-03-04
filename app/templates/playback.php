@@ -1,25 +1,30 @@
 <div class="tab-content">
     <!-- PLAYBACK PANEL -->
     <div id="playback" class="tab-pane active">
-        <div class="container-fluid" style="padding-top: 5px;">
-            <div class="knobs row" style="margin-top: 0">
-                <div id="time-knob" class="col-sm-6" style="margin-top: 10px;">
-                    <span id="currentartist"><i class="fa fa-spinner fa-spin"></i></span>
-                    <span id="currentsong"><i class="fa fa-spinner fa-spin"></i></span>
-                    <span id="currentalbum"><i class="fa fa-spinner fa-spin"></i></span>
+        <div class="container-fluid" style="padding-top: 0">
+            <div class="knobs row" style="margin-top: 5px;">
+                <div id="time-knob" class="col-sm-5" style="margin-top: 60px;">
+                    <p style="margin-top: 5px; line-height: 28pt" id="currentartist"><i class="fa fa-spinner fa-spin"></i></p>
+                    <p style="margin-top: 5px; line-height: 32pt" id="currentsong"><i class="fa fa-spinner fa-spin"></i></p>
+                    <p style="margin-top: 5px; line-height: 28pt" id="currentalbum"><i class="fa fa-spinner fa-spin"></i></p>
                     <div id="overlay-playsource-open" title="View and change playback source" <?php if ($this->spotify === '0'): ?>class="disabled"<?php endif; ?>>
-                        <span id="format-bitrate"><i class="fa fa-spinner fa-spin"></i></span>
+                        <p style="margin-top: 5px; line-height: 24pt" id="format-bitrate"><i class="fa fa-spinner fa-spin"></i></p>
                     </div>
-                    <div class="btn-group">
-                        <button id="repeat" class="btn btn-default btn-lg btn-cmd btn-toggle" type="button" title="Repeat" data-cmd="repeat"><i class="fa fa-repeat"></i></button>
-                        <button id="random" class="btn btn-default btn-lg btn-cmd btn-toggle" type="button" title="Random" data-cmd="random"><i class="fa fa-random"></i></button>
-                        <button id="single" class="btn btn-default btn-lg btn-cmd btn-toggle <?php if ($this->activePlayer === 'Spotify'): ?>disabled<?php endif; ?>" type="button" title="Single" data-cmd="single"><i class="fa fa-refresh"></i></button>
-                        <!--<button type="button" id="consume" class="btn btn-default btn-lg btn-cmd btn-toggle" title="Consume Mode" data-cmd="consume"><i class="fa fa-compress"></i></button>-->
+                    <div align="center" style="display:block; margin-top: 25px; line-height: 30pt;">
+                        <div class="btn-group">
+                            <button id="repeat" class="btn btn-default btn-lg btn-cmd btn-toggle" type="button" title="Repeat" data-cmd="repeat"><i class="fa fa-repeat"></i></button>
+                            <button id="random" class="btn btn-default btn-lg btn-cmd btn-toggle" type="button" title="Random" data-cmd="random"><i class="fa fa-random"></i></button>
+                            <button id="single" class="btn btn-default btn-lg btn-cmd btn-toggle <?php if ($this->activePlayer === 'Spotify'): ?>disabled<?php endif; ?>" type="button" title="Single" data-cmd="single"><i class="fa fa-refresh"></i></button>
+                            <!--<button type="button" id="consume" class="btn btn-default btn-lg btn-cmd btn-toggle" title="Consume Mode" data-cmd="consume"><i class="fa fa-compress"></i></button>-->
+                        </div><br/><br/>
+                        <div class="btn-group">
+                            <a class="btn btn-default btn-lg btn-lg" type="button" href="#" onclick="javascript:window.location.reload(true)">Reload</a>
+                        </div>
                     </div>
                 </div>
                 <?php if ($this->coverart == 1): ?>
-                <div class="col-sm-6 coverart">
-                    <img style="max-width: 280px;" id="cover-art" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="transparent-square">
+                <div class="col-sm-7 coverart">
+                    <img style="max-width: 570px;" id="cover-art" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="transparent-square">
                     <!--<a href="#" id="overlay-playsource-open" class="btn btn-default" title="Play source">MPD</a>-->
                 </div>
                 <?php endif ?>
